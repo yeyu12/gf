@@ -92,8 +92,6 @@ type (
 )
 
 func (c cRun) Index(ctx context.Context, in cRunInput) (out *cRunOutput, err error) {
-
-	g.Dump(in.WatchPaths)
 	// Necessary check.
 	if gproc.SearchBinary("go") == "" {
 		mlog.Fatalf(`command "go" not found in your environment, please install golang first to proceed this command`)
